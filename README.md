@@ -1,4 +1,4 @@
-[![a-fayez](https://circleci.com/gh/a-fayez/<PROJECT_NAME>.svg?style=svg)](https://app.circleci.com/pipelines/github/A-Fayez/sklearn-k8s/1/workflows/f4362e56-dfbc-41a6-aebc-56259969668d/jobs/1)
+[![A-Fayez](https://circleci.com/gh/A-Fayez/sklearn-k8s.svg?style=svg)](https://github.com/A-Fayez/sklearn-k8s/tree/master)
 
 # Description
 
@@ -34,4 +34,10 @@ This will download and run the container locally.
 
 # Project Structure
 
-app.py: Flask api server, exposes and endpoint `/predict` that will predict housing prices in Boston using a pre-trained [model](https://www.kaggle.com/c/boston-housing).
+- [app.py](./app.py): Flask api server, exposes and endpoint `/predict` that will predict housing prices in Boston using a pre-trained [model](https://www.kaggle.com/c/boston-housing).
+
+- [Dockerfile](Dockerfile) Container building instructions for flask api.
+
+- [upload_docker.sh](upload_docker.sh) A helper script that uploads the built docker image to docker hub.
+
+- [run_kubernetes.sh](run_kubernetes.sh) A helper script to deploy the containerized sklearn app to a k8s cluster.
