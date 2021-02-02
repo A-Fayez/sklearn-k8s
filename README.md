@@ -2,7 +2,21 @@
 
 # Description
 
-An sklearn model with a Flask API deployed to a kubernetes cluster. This project is a submission to Udacity's AWS Cloud DevOps Nanodegree.
+A Flask API which predicts housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on using a pre-trained [model](https://www.kaggle.com/c/boston-housing).
+
+# Motivation
+
+This is my attempt to operationalize a machine learning microservice API by building the app in a docker container, deploying it to a kubernetes cluster, integrating CI/CD pipeline and automating the initial environment setup using a set of helper bash scripts and Makefiles. The goal is to minimize divergence between development and production, enable faster deployments and early recovery from buggy code which can be caught by utilizing a CI/CD tool like circleci. This is also an attempt to follow [The Twelf-Factor App methodology](https://12factor.net/) which aims to make applications more cloud-native friendly and suitable for a microservice-oriented architecture. This project is my submission to [Udacity's AWS Cloud DevOps Nanodegree](https://www.udacity.com/course/cloud-dev-ops-nanodegree--nd9991).
+
+# What I have learned
+
+- A high-level understanding about kubernetes and a clear understanding of the problems that it tries to solve.
+
+- Creating and managing a kubernetes deployments and services.
+
+- Containerization of an application using docker and docker hub.
+
+- CI/CD integration.
 
 # Getting Started
 
@@ -16,12 +30,18 @@ source ~/.venv/bin/activate
 make install
 python app.py
 
-# After the api is run and ready to listen for connections
+# When the api is running and ready to listen for connections
 # run a simple test
 ./make_predictions.sh
 ```
 
-## Kubernetes
+## Running using Docker
+
+```bash
+./run_docker.sh
+```
+
+## Running using Kubernetes
 
 Make sure a kubernetes cluster is running locally using [minikube](https://minikube.sigs.k8s.io/docs/start/).
 
