@@ -13,7 +13,9 @@ setup:
 install:
 	# This should be run from inside a virtualenv
 	pip install --upgrade pip &&\
-	python -m pip install -r requirements.txt --log /mnt/hdd/tmp/piplog.txt	
+	python -m pip install -r requirements.txt --log /mnt/hdd/tmp/piplog.txt	&&\
+	wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+	chmod +x /bin/hadolint
 
 test:
 	# Additional, optional, tests could go here
