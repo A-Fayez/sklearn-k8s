@@ -6,7 +6,7 @@ A Flask API which predicts housing prices in Boston according to several feature
 
 # Motivation
 
-This is my attempt to operationalize a machine learning microservice API by building the app in a docker container, deploying it to a kubernetes cluster, integrating CI/CD pipeline and automating the initial environment setup using a set of helper bash scripts and Makefiles. The goal is to minimize divergence between development and production, enable faster deployments and early recovery from buggy code which can be caught by utilizing a CI/CD tool like circleci. This is also an attempt to follow [The Twelf-Factor App methodology](https://12factor.net/) which aims to make applications more cloud-native friendly and suitable for a microservice-oriented architecture. This project is my submission to [Udacity's AWS Cloud DevOps Nanodegree](https://www.udacity.com/course/cloud-dev-ops-nanodegree--nd9991).
+This is my attempt to operationalize a machine learning microservice API by building the app in a docker container, deploying it to a kubernetes cluster, integrating CI/CD pipeline and automating the initial environment setup using a set of helper bash scripts and Makefiles. The goal is to minimize divergence between development and production, enable faster deployments and early recovery from buggy code which can be caught by utilizing a CI/CD tool like circleci. This is also an attempt to follow [The Twelve-Factor App methodology](https://12factor.net/) which aims to make applications more cloud-native friendly and suitable for a microservice-oriented architecture. This project is my submission to [Udacity's AWS Cloud DevOps Nanodegree](https://www.udacity.com/course/cloud-dev-ops-nanodegree--nd9991).
 
 # What I have learned
 
